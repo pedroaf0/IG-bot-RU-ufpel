@@ -9,7 +9,15 @@ moment.locale('pt-br');
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
-
+  const http = require("http");
+  const express = require('express');
+  var app = express();
+  const server = http.createServer(app);
+  app.get('/', function(req, res) {
+    res.send('O bot está rodando agora ;)');
+  });
+  server.listen(process.env.PORT||3333);
+  
 
 (async () => {
 
@@ -45,9 +53,10 @@ function capitalizeFirstLetter(string) {
         console.log("\nProcess done!\n".green);
 
         // If ONLINE_MODE is enabled, this example will run until we send an exit signal
-        process.exit();
+        //process.exit();
     });
-    
+    const http = require("http");
+
 
 
     
